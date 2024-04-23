@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "users")
 public class User {
     @Id
@@ -21,6 +20,8 @@ public class User {
     private String lastName;
 
     private String firstName;
+
+    private String username;
 
     private int phoneNumber;
 
