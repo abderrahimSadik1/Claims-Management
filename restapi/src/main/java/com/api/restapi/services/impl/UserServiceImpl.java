@@ -1,5 +1,6 @@
 package com.api.restapi.services.impl;
 
+import com.api.restapi.models.Role;
 import com.api.restapi.models.User;
 import com.api.restapi.repositories.UserRepository;
 import com.api.restapi.services.UserService;
@@ -17,6 +18,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User registerUser(User user) {
+        user.setRole(Role.USER);
         return userRepository.save(user);
     }
 
